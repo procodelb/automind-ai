@@ -9,17 +9,20 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Hero Section -->
-    <header class="bg-gradient-to-r from-blue-900 to-green-500 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold">AutoMind AI</h1>
-            <p class="mt-4 text-lg md:text-xl">Automate Your Business. Grow Faster.</p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                <!-- Demo button uses a Formspree endpoint – replace `yourformid` once you create your form -->
-                <a href="https://formspree.io/f/xlgnyoeo" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-100 transition-colors">
+    <header class="bg-gradient-to-r from-blue-900 via-indigo-800 to-green-600 text-white py-20 relative overflow-hidden">
+        <!-- Decorative blurred shapes for a more 3D/4K feel -->
+        <div class="absolute top-0 left-0 w-72 h-72 bg-indigo-500 opacity-30 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-72 h-72 bg-green-500 opacity-30 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold drop-shadow-lg">AutoMind AI</h1>
+            <p class="mt-4 text-xl md:text-2xl font-medium opacity-90">Automate Your Business. Grow Faster.</p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <!-- Demo button scrolls to the demo form section -->
+                <a href="#demo" class="bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold shadow-xl transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                     Get Free Demo
                 </a>
                 <!-- WhatsApp CTA uses the Lebanese number you provided in international format (96171443392) -->
-                <a href="https://wa.me/96171443392?text=Hi%20I%20want%20the%20AutoMind%20AI%20demo" class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-green-600 transition-colors" target="_blank" rel="noopener">
+                <a href="https://wa.me/96171443392?text=Hi%20I%20want%20the%20AutoMind%20AI%20demo" class="bg-green-500 text-white px-8 py-4 rounded-xl font-semibold shadow-xl transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl" target="_blank" rel="noopener">
                     WhatsApp Chat
                 </a>
             </div>
@@ -27,39 +30,66 @@
     </header>
 
     <!-- Features Section -->
-    <section class="container mx-auto px-6 py-12">
-        <h2 class="text-3xl font-bold mb-6 text-center">Why AutoMind AI?</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Automated Social Posts</h3>
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold mb-8 text-center">Why AutoMind&nbsp;AI?</h2>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl transform transition-all duration-300 hover:-translate-y-2 hover:shadow-3xl">
+                <h3 class="text-2xl font-semibold mb-3">Automated Social Posts</h3>
                 <p>Generate and schedule daily social media content effortlessly using AI.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Lead Capture &amp; Follow‑Up</h3>
+            <div class="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl transform transition-all duration-300 hover:-translate-y-2 hover:shadow-3xl">
+                <h3 class="text-2xl font-semibold mb-3">Lead Capture &amp; Follow‑Up</h3>
                 <p>Capture leads from your website and automatically follow up via email and messaging.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">CRM &amp; Reports</h3>
+            <div class="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl transform transition-all duration-300 hover:-translate-y-2 hover:shadow-3xl">
+                <h3 class="text-2xl font-semibold mb-3">CRM &amp; Reports</h3>
                 <p>Keep track of your customers and view insightful analytics and reports.</p>
             </div>
         </div>
     </section>
 
+    <!-- Demo Form Section -->
+    <section id="demo" class="container mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold mb-8 text-center">Request Your Free Demo</h2>
+        <form action="https://formspree.io/f/xlgnyoeo" method="POST" class="max-w-2xl mx-auto bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl space-y-6 transform transition-all duration-300 hover:shadow-3xl">
+            <div>
+                <label class="block mb-2 font-semibold">Your Name</label>
+                <input type="text" name="name" required class="w-full p-4 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500" placeholder="Enter your name">
+            </div>
+            <div>
+                <label class="block mb-2 font-semibold">Email</label>
+                <input type="email" name="email" required class="w-full p-4 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500" placeholder="you@example.com">
+            </div>
+            <div>
+                <label class="block mb-2 font-semibold">Business Type</label>
+                <input type="text" name="business" class="w-full p-4 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500" placeholder="e.g. Salon, Gym, Restaurant">
+            </div>
+            <div>
+                <label class="block mb-2 font-semibold">Message</label>
+                <textarea name="message" rows="4" class="w-full p-4 border border-gray-300 rounded-lg focus:border-blue-500 focus:ring-blue-500" placeholder="Tell us about your needs"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-700 text-white px-6 py-4 rounded-lg font-semibold shadow-md hover:bg-blue-800 hover:shadow-lg transition-colors">
+                Submit
+            </button>
+        </form>
+    </section>
+
     <!-- Call‑to‑Action Section -->
-    <section class="bg-gray-100 py-12">
+    <section class="bg-gray-100 py-20">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Ready to take your business to the next level?</h2>
-            <p class="mb-6">Start with a free demo and see how AutoMind AI can help your business grow.</p>
-            <a href="https://formspree.io/f/yourformid" class="bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+            <h2 class="text-4xl font-bold mb-4">Ready to take your business to the next level?</h2>
+            <p class="mb-8 text-lg">Start with a free demo and see how AutoMind AI can help your business grow.</p>
+            <a href="#demo" class="bg-blue-700 text-white px-10 py-5 rounded-xl font-semibold shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-blue-800 hover:shadow-2xl">
                 Get Started
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
+    <footer class="bg-gray-900 text-gray-300 py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2026 AutoMind AI. All rights reserved.</p>
+            <p class="text-lg">&copy; 2026 AutoMind AI. All rights reserved.</p>
+            <p class="mt-2 text-sm text-gray-500">Powered by proc0de</p>
         </div>
     </footer>
 </body>
